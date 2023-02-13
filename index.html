@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+    body{background:#ffffff;
+    text-align:center;
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+    font-family: sans-serif;
+    }
+    a{
+    background: #FFB646;
+    color: navy;
+    text-decoration: none;
+    }
+    a:hover{
+    color: cyan;
+    text-shadow: 0 0 3px #000;
+    background: maroon;
+    }
+    img.loader{
+    width: 24px;
+    }    
+    #controls{
+     background: rgba(255,255,255,0.5);
+     padding: 5px;
+    }
+    #preview{     
+     border: 1px solid red;
+     padding: 5px;
+     background: rgba(255,255,255, 0.2);
+    }
+    #preview .preview-item{    
+    display: inline-block;
+    height: 70px;
+    width: 70px;
+    padding: 3px;
+    }
+    #preview .preview-item img{
+     width: 64px;
+     height: 64px;
+    }
+    .preview-item img:hover{
+      border: dashed 1px red;
+      box-shadow: 0 0 3px rgba(0,0,0,0.5);
+      cursor: pointer;
+    }
+    .cItem{
+    display:block;
+    }
+    footer{
+        position: relative;
+        height: 100%;
+        width: 100%;
+        padding: 20px 0;
+        margin-top: auto;
+        font-size: small;
+        
+    }
+    .footer{
+        
+    width: 100%;
+    background: rgba(255,255,255, 0.4);     
+    }
+    </style>
+    <script src="animList.js"></script>
+    <title>SVG Loaders Preview</title>
+  </head>
+  <body>
+  <div style="height:200px;">
+    <img id="loader" class="loader" src="Spinner-0.8s-200px.svg">
+  </div>
+    <br><br><br>&nbsp;<br>&nbsp;
+    <div id="controls">
+      <div class="cItem">
+        <select id="imgs" onchange="changeImgSrc(this)">
+        </select>
+      </div>
+      <div class="cItem">
+        <input
+            type="range"
+            name="size"
+            id="size"
+            min="16"
+            max="200"
+            step="1"
+            value="16" onchange="changeImgSize(this)" />
+            <output id="size-output" for="size">16px</output>
+      </div>
+      <div class="cItem">
+        <input type="color" id="color" value="#FFFFFF" onchange="changeBodyColor(this)">
+      </div>
+  </div>
+    <hr>
+    <div id="preview">
+    </div>
+    <footer>
+      <div class="footer">
+      The majority of these SVGs are genertated from <a target="_blank" href="https://loading.io/">loading.io &#x00279A;</a>, <a href="https://github.com/n3r4zzurr0/svg-spinners" target="_blank">svg-spinners &#x00279A;</a>, <a href="https://icons8.com/preloaders/" target="_blank">icon8 &#x00279A;</a>
+      </div>
+    </footer>
+    <script>
+    var imgs = document.getElementById('imgs');
+    var loader = document.getElementById('loader');
+    var preview = document.getElementById('preview');
+    var sizeOutput = document.getElementById('size-output');
+    var outHtml = '';
+    var previewHtml = '';
+    for (i =0; i < arr.length; i++){
+      outHtml += '<option value="'+arr[i]+'">'+arr[i]+'</option>';  
+      previewHtml += '<div class="preview-item"><img src="'+arr[i]+'" title="'+arr[i]+'" onclick="changeImgSrc(this)"></div>';
+    }
+    imgs.innerHTML = outHtml;
+    preview.innerHTML = previewHtml;
+    function changeImgSrc(ob){ 
+      if (ob.value != undefined){
+        loader.src = ob.value;
+      }
+      else{
+        loader.src = ob.src;        
+        imgs.value = ob.src.replace(/.*\//,'');        
+      }      
+    }
+    function changeImgSize(ob){      
+      sizeOutput.textContent = ob.value+'px';
+      loader.style.width = ob.value+'px';
+    }
+    function changeBodyColor(ob){
+      document.getElementsByTagName('body')[0].style.background = ob.value;
+    }
+    </script>
+  </body>
+</html>
