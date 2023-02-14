@@ -55,7 +55,22 @@
         border-radius: 5px;
       }
       .cItem{
-        display:block;
+        display:block;        
+      }  
+      input[type="range"] {
+        width: 65%;
+        margin: 0;
+      }
+      select{
+        width: 65%;
+        height: 2.0em;
+        font-size: large;
+        color: red;
+        border: 2px outset red;
+        border-radius: 5px;
+      }
+      output{
+        display: block;
       }
       footer{
         position: relative;
@@ -84,6 +99,7 @@
         </select>
       </div>
       <div class="cItem">
+      <output id="size-output" for="size">16px</output>
         <input
             type="range"
             name="size"
@@ -91,8 +107,18 @@
             min="16"
             max="200"
             step="1"
+            list="markers"
             value="16" onchange="changeImgSize(this)" />
-        <output id="size-output" for="size">16px</output>
+            <datalist id="markers">
+              <option value="16" label="16"></option>
+              <option value="24" label="24"></option>
+              <option value="32" label="32"></option>
+              <option value="48" label="48"></option>
+              <option value="64" label="64"></option>
+              <option value="96" label="96"></option>
+              <option value="128" label="128"></option>
+              <option value="200" label="200"></option>
+            </datalist>        
       </div>
       <div class="cItem">
         <input type="color" id="color" value="#FFFFFF" onchange="changeBodyColor(this)">
