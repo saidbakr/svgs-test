@@ -43,7 +43,7 @@
      width: 64px;
      height: 64px;
     }
-    .preview-item img:hover{
+    .preview-item img:hover, .selected{
       border: dashed 1px red;
       box-shadow: 0 0 3px rgba(0,0,0,0.5);
       cursor: pointer;
@@ -116,12 +116,22 @@
     imgs.innerHTML = outHtml;
     preview.innerHTML = previewHtml;
     function changeImgSrc(ob){ 
+       var previousSelect = document.getElementsByClassName('selected');
+       (previousSelect.length > 0)? previousSelect[0].classList.remove('selected'):'';
       if (ob.value != undefined){
         loader.src = ob.value;
+        var previewImgs = document.querySelectorAll('.preview-item img');
+        
+        previewImgs.forEach(function(e){        
+        if (e.src.replace(/.*\//,'') == ob.value){
+          e.classList.add('selected');
+        }
+        })
       }
-      else{
+      else{       
         loader.src = ob.src;        
-        imgs.value = ob.src.replace(/.*\//,'');        
+        imgs.value = ob.src.replace(/.*\//,'');   
+        ob.classList.add('selected');
       }      
     }
     function changeImgSize(ob){      

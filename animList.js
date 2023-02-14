@@ -50,6 +50,7 @@ var arr =[
 'z3.svg',
 'z42.svg',
 'z6.svg',
+'z829.svg',
 'z833.svg',
 'z-90-ring-with-bg.svg',
 'z-blocks-wave.svg',
