@@ -88,7 +88,7 @@
   <script src="animList.js"></script>
     <title>SVG Loaders Preview</title>
  </head>
-  <body>
+  <body onload="resetControls()">
     <div style="height:200px;">
       <img id="loader" class="loader" src="Spinner-0.8s-200px.svg">
     </div>
@@ -170,6 +170,12 @@
       }
       function changeBodyColor(ob){
         document.getElementsByTagName('body')[0].style.background = ob.value;
+      }
+      function resetControls(){        
+        imgs.value = loader.src.replace(/.*\//,''); 
+        imgs.dispatchEvent(new Event("change"));
+        document.getElementById('size').value = 16;
+        document.getElementById('color').value = '#FFFFFF';        
       }
     </script>
   </body>
