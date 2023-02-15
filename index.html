@@ -24,7 +24,7 @@
         background: maroon;
       }
       img.loader{
-        width: 24px;
+        width: 32px;
       }    
       #controls{
         background: rgba(255,255,255,0.5);
@@ -69,6 +69,11 @@
         border: 2px outset red;
         border-radius: 5px;
       }
+      #colorHex{
+        disply: inline-block;
+        font-size: large;
+        font-family: mono;
+      }
       output{
         display: block;
       }
@@ -99,7 +104,7 @@
         </select>
       </div>
       <div class="cItem">
-      <output id="size-output" for="size">16px</output>
+      <output id="size-output" for="size">32px</output>
         <input
             type="range"
             name="size"
@@ -121,7 +126,7 @@
             </datalist>        
       </div>
       <div class="cItem">
-        <input type="color" id="color" value="#FFFFFF" onchange="changeBodyColor(this)">
+        <input type="color" id="color" value="#FFFFFF" onchange="changeBodyColor(this)">&nbsp;<code id="colorHex"> #ffffff </code>
       </div>
   </div>
     <hr>
@@ -137,6 +142,7 @@
       var loader = document.getElementById('loader');
       var preview = document.getElementById('preview');
       var sizeOutput = document.getElementById('size-output');
+      var colorHex = document.getElementById('colorHex');
       var outHtml = '';
       var previewHtml = '';
       for (i =0; i < arr.length; i++){
@@ -170,11 +176,12 @@
       }
       function changeBodyColor(ob){
         document.getElementsByTagName('body')[0].style.background = ob.value;
+        colorHex.innerText = ob.value;
       }
       function resetControls(){        
         imgs.value = loader.src.replace(/.*\//,''); 
         imgs.dispatchEvent(new Event("change"));
-        document.getElementById('size').value = 16;
+        document.getElementById('size').value = 32;
         document.getElementById('color').value = '#FFFFFF';        
       }
     </script>
