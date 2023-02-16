@@ -56,6 +56,7 @@ var arr =[
 'z-blocks-wave.svg',
 'z-gooey-balls-1.svg',
 'zgrid.svg',
+'z-ring-resize.svg',
 'ztail-spin.svg',
 'zthree-dots.svg',
 ];
