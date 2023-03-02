@@ -1,0 +1,70 @@
+<svg viewBox="0 0 200 100" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="f4">
+      <feOffset result="offOut" in="SourceGraphic" />
+      <feColorMatrix result="matrixOut" in="offOut" color="black" type="circle"
+       />
+      <feGaussianBlur result="blurOut" in="matrixOut" stdDeviation="1" />
+      <feBlend in="SourceGraphic" in2="blurOut" mode="normal" />
+    </filter>
+  </defs>
+  <path
+    fill="none"
+    stroke="lightgrey"
+    d="M20,50 C20,-50 180,150 180,50 C180-50 20,150 20,50 z" filter="url(#f4)" />
+
+  <circle r="10" fill="red" filter="url(#f4)">
+    <animateMotion
+      dur="10s"
+      repeatCount="indefinite"
+      path="M20,50 C20,-50 180,150 180,50 C180-50 20,150 20,50 z" />
+  </circle>
+  <circle r="9" fill="red" filter="url(#f4)">
+    <animateMotion
+      dur="9s"
+      repeatCount="indefinite"
+      path="M20,50 C20,-50 180,150 180,50 C180-50 20,150 20,50 z" />
+  </circle>
+  <circle r="8" fill="red" filter="url(#f4)">
+    <animateMotion
+      dur="8s"
+      repeatCount="indefinite"
+      path="M20,50 C20,-50 180,150 180,50 C180-50 20,150 20,50 z" />
+  </circle>
+  <circle r="7" fill="red" filter="url(#f4)">
+    <animateMotion
+      dur="7s"
+      repeatCount="indefinite"
+      path="M20,50 C20,-50 180,150 180,50 C180-50 20,150 20,50 z" />
+  </circle>
+  <circle r="6" fill="red" filter="url(#f4)">
+    <animateMotion
+      dur="6s"
+      repeatCount="indefinite"
+      path="M20,50 C20,-50 180,150 180,50 C180-50 20,150 20,50 z" />
+  </circle>
+  <circle r="5" fill="red" filter="url(#f4)">
+    <animateMotion
+      dur="5s"
+      repeatCount="indefinite"
+      path="M20,50 C20,-50 180,150 180,50 C180-50 20,150 20,50 z" />
+  </circle>
+  <circle r="6" fill="red" filter="url(#f4)">
+    <animateMotion
+      dur="4s"
+      repeatCount="indefinite"
+      path="M20,50 C20,-50 180,150 180,50 C180-50 20,150 20,50 z" />
+  </circle>
+  <circle r="7" fill="red" filter="url(#f4)">
+    <animateMotion
+      dur="3s"
+      repeatCount="indefinite"
+      path="M20,50 C20,-50 180,150 180,50 C180-50 20,150 20,50 z" />
+  </circle>
+  <circle r="8" fill="red" filter="url(#f4)">
+    <animateMotion
+      dur="2s"
+      repeatCount="indefinite"
+      path="M20,50 C20,-50 180,150 180,50 C180-50 20,150 20,50 z" />
+  </circle>
+</svg>
