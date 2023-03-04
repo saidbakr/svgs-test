@@ -25,6 +25,7 @@ var arr =[
 'Interwind-1s-200px.svg',
 'Magnify-1s-200px.svg',
 'Magnify-1so-200px.svg',
+'my-loader.svg',
 'Pulse-1s-200px.svg',
 'Pulse-o1s-200px.svg',
 'Reload-0.8s-200px.svg',
