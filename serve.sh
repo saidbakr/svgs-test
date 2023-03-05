@@ -1,1 +1,1 @@
-./darkhttpd ./ --port 8889 --mimetypes mimetypes
+./darkhttpd ./ --port 8787 --mimetypes mimetypes
