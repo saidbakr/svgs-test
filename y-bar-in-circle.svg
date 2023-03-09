@@ -1,0 +1,80 @@
+<!-- From https://codepen.io/nikhil8krishnan/pen/rVoXJa -->
+<svg version="1.1" id="L1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 100 100" enable-background="new 0 0 100 100" xml:space="preserve">
+    <circle fill="none" stroke="#f00" stroke-width="6" stroke-miterlimit="15" stroke-dasharray="14.2472,14.2472" cx="50" cy="50" r="47" >
+      <animateTransform 
+         attributeName="transform" 
+         attributeType="XML" 
+         type="rotate"
+         dur="3s" 
+         from="0 50 50"
+         to="360 50 50" 
+         repeatCount="indefinite" />
+      <animate attributeName="stroke" values="#f30;#f33;#800;#f33;#f30" dur="2s" repeatCount="indefinite" />
+  </circle>
+  <circle fill="none" stroke="#f0f" stroke-width="2" stroke-miterlimit="10" stroke-dasharray="10,10" cx="50" cy="50" r="39">
+      <animateTransform 
+         attributeName="transform" 
+         attributeType="XML" 
+         type="rotate"
+         dur="5s" 
+         from="0 50 50"
+         to="-360 50 50" 
+         repeatCount="indefinite" />
+      <animate attributeName="stroke" values="#033;#066;#0aa;#0ff;#0aa;#066" dur="2s" repeatCount="indefinite" />
+      <animate attributeName="fill" values="rgba(0,0,0, 0.2);rgba(0,0,0, 0.3);rgba(0,0,0, 0.4);rgba(0,0,0, 0.3);rgba(0,0,0, 0.2)" dur="2s" repeatCount="indefinite" />
+  </circle>
+  <g fill="#ff0">
+  <rect x="30" y="35" width="5" height="30" fill="#f00">
+    <animateTransform 
+       attributeName="transform" 
+       dur="1s" 
+       type="translate" 
+       values="0 5 ; 0 -5; 0 5" 
+       repeatCount="indefinite" 
+       begin="0.1"/>
+    <animate attributeName="fill" values="#033;#066;#0aa;#0ff;#0aa;#066" dur="2s" repeatCount="indefinite" />
+  </rect>
+  <rect x="40" y="35" width="5" height="30" fill="#0f0" >
+    <animateTransform 
+       attributeName="transform" 
+       dur="1s" 
+       type="translate" 
+       values="0 5 ; 0 -5; 0 5" 
+       repeatCount="indefinite" 
+       begin="0.2"/>
+    <animate attributeName="fill" values="#330;#660;#aa0;#ff0;#aa0;#660" dur="3s" repeatCount="indefinite" />
+  </rect>
+  <rect x="50" y="35" width="5" height="30" fill="#00f" >
+    <animateTransform 
+       attributeName="transform" 
+       dur="1s" 
+       type="translate" 
+       values="0 5 ; 0 -5; 0 5" 
+       repeatCount="indefinite" 
+       begin="0.3"/>
+    <animate attributeName="fill" values="#003;#006;#00a;#00f;#00a;#006" dur="4s" repeatCount="indefinite" />
+  </rect>
+  <rect x="60" y="35" width="5" height="30" fill="#800" >
+    <animateTransform 
+       attributeName="transform" 
+       dur="1s" 
+       type="translate" 
+       values="0 5 ; 0 -5; 0 5"  
+       repeatCount="indefinite" 
+       begin="0.4"/>
+    <animate attributeName="fill" values="#300;#600;#a00;#f00;#a00;#600" dur="5s" repeatCount="indefinite" />
+  </rect>
+  <rect x="70" y="35" width="5" height="30" fill="#080" >
+    <animateTransform 
+       attributeName="transform" 
+       dur="1s" 
+       type="translate" 
+       values="0 5 ; 0 -5; 0 5" 
+       repeatCount="indefinite" 
+       begin="0.5"/>
+    <animate attributeName="fill" values="#0f0;#0a0;#060;#030;#060;#0a0;#0f0" dur="6s" repeatCount="indefinite" />
+  </rect>
+  <animate attributeName="stroke" values="#0f0;#0a0;#060;#030;#060;#0a0;#0f0" dur="6s" repeatCount="indefinite" />
+  </g>
+</svg>
+ 

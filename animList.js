@@ -51,6 +51,7 @@ var arr =[
 'Wedges-5.9s-200px.svg',
 'Wedges-9.1s-200px.svg',
 'x-infinity.svg',
+'y-bar-in-circle.svg',
 'y-fill-square.svg',
 'y-rotating-circles.svg',
 'z15.svg',
