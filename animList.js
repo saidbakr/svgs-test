@@ -54,6 +54,7 @@ var arr =[
 'y-bar-in-circle.svg',
 'y-fill-square.svg',
 'y-rotating-circles.svg',
+'y-steam.svg',
 'z15.svg',
 'z3.svg',
 'z42.svg',

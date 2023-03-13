@@ -1,0 +1,155 @@
+<!-- FROM https://codepen.io/needrent/pen/xxaqxgV -->
+<!-- Generator: Adobe Illustrator 27.2.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 250 250" style="enable-background:new 0 0 250 250;" xml:space="preserve">
+    <style>
+    :root{
+  --bg: #141414;
+  --main-color: #0757b3;
+  --logo-bg: #0c0c0c;
+  --time: 10s;
+  --sec-time: calc(var(--time) / 2);
+  --ter-time: calc(var(--time) / 3);
+  --glow-sizeIn: 2px;
+  --glow-sizeOut: 5px;
+  --glow-colorIn: #0077ff;
+  --glow-colorOut: #0a5ebf;
+  --stroke-w-small: 1;
+  --stroke-w-medium: 2;
+  --stroke-w-big: 5;
+}
+svg{
+  width: 25vw;
+  stroke-linecap: round;
+  transform: rotate(-45deg);
+  stroke: white;
+  fill: none;
+  stroke-miterlimit:10;
+}
+/*-----
+  Neon/Glow effect
+-----*/
+svg circle,
+svg path{
+  filter: 
+    drop-shadow(0px 0px var(--glow-sizeIn) var(--glow-colorIn))
+    drop-shadow(0px 0px var(--glow-sizeOut) var(--glow-colorOut))
+    drop-shadow(0px 0px var(--glow-sizeOut) var(--glow-colorOut))
+    drop-shadow(0px 0px var(--glow-sizeOut) var(--glow-colorOut));
+}
+/*-----
+  Background spin
+-----*/
+.spin{
+  stroke-width:var(--stroke-w-small);
+  stroke-dasharray:104.7239,104.7239;
+}
+#spinMotion{
+  transform-origin: center center;
+  animation: aniSpin var(--sec-time) linear infinite;
+}
+@keyframes aniSpin{
+  to{transform: rotate(-360deg);}
+}
+/*-----
+  Main stroke animation
+-----*/
+	.main{
+    stroke-width:var(--stroke-w-big);
+    stroke-dasharray: 500;
+    stroke-dashoffset: 500;
+    animation: hero var(--time) ease infinite;
+}
+@keyframes hero{
+  0%{
+    stroke-dashoffset: 500;
+  }
+  58%{
+    stroke-dashoffset: -150;
+  }
+  60%{
+    stroke-dashoffset: -150;
+  }
+  80%{
+    stroke-dashoffset: 0;
+  }
+  84%{
+    stroke-dashoffset: 500;
+    stroke: var(--stroke-w-big);
+  }
+  85%{
+    stroke-dashoffset: 500;
+    stroke: none;
+  }
+  100%{
+    stroke-dashoffset: 500;
+    stroke: none;
+  }
+}
+/*-----
+  Gears
+-----*/
+.smallGear,
+.bigGear{
+  stroke-width:var(--stroke-w-medium);
+  animation: gear var(--time) ease infinite;
+}
+@keyframes gear{
+  0%{
+    opacity: 0;
+  }
+  50%{
+    opacity: 1;
+  }
+  60%{
+    opacity: 1;
+  }
+  100%{
+    opacity: 0;
+  }
+}
+/*-----
+  Big Gear
+-----*/
+.bigGear{
+  stroke-dasharray:100;
+}
+/*-----
+  BG
+-----*/
+.BG{
+  filter: drop-shadow(0px 0px 0px var(--bg));
+  fill: var(--logo-bg);
+  stroke: none;
+}
+</style>
+<!--  First element will show in the back -->
+	<path pathLength="500" class="BG" d="M92.6,218.59c8.4,0,15.21-6.81,15.21-15.21c0-4.68-3.52-9.6-5.73-12.12c-11.85-13.49-12.69-33.27,0-45.96
+		c2.16-2.16,7.14-5.47,7.14-5.47c6.72-4.28,11.18-11.79,11.18-20.35c0-6.05-1.79-12.09-5.9-15.8c0,0-11.05-9.12-11.05-19.03
+		c0-11.93,9.67-21.61,21.61-21.61s21.61,9.67,21.61,21.61c0,6.91-5.36,13.8-8.67,17.33c-4.37,4.66-7.53,10.61-7.53,17.5
+		c0,8.18,4.07,15.4,10.3,19.76c0,0,5.42,4.2,7.28,6.06c12.69,12.69,12.55,33.14,0,45.96c-3.08,3.15-5.99,7.25-5.99,12.12
+		c0,8.4,6.81,15.21,15.21,15.21c2.03,0,4.71-0.7,6.2-1.23c36.93-13.09,61.6-50.74,61.6-92.36c0-55.23-44.77-100-100-100
+		s-100,44.77-100,100c0,41.72,24.86,79.27,61.85,92.47C88.28,217.95,90.63,218.59,92.6,218.59z"/>
+<!-- 
+  The small lines that spin around the BG
+-->
+<g id="spinMotion">
+	<circle class="spin" cx="125" cy="125" r="101"/>
+</g>
+<!-- 
+  The main stroke animation/loading element
+  Used pathLength in order to eleminate the need to calulate the length of the paths for the animation
+-->
+	<path pathLength="500" class="main" d="M92.6,218.59c8.4,0,15.21-6.81,15.21-15.21c0-4.68-3.52-9.6-5.73-12.12c-11.85-13.49-12.69-33.27,0-45.96
+		c2.16-2.16,7.14-5.47,7.14-5.47c6.72-4.28,11.18-11.79,11.18-20.35c0-6.05-1.79-12.09-5.9-15.8c0,0-11.05-9.12-11.05-19.03
+		c0-11.93,9.67-21.61,21.61-21.61s21.61,9.67,21.61,21.61c0,6.91-5.36,13.8-8.67,17.33c-4.37,4.66-7.53,10.61-7.53,17.5
+		c0,8.18,4.07,15.4,10.3,19.76c0,0,5.42,4.2,7.28,6.06c12.69,12.69,12.55,33.14,0,45.96c-3.08,3.15-5.99,7.25-5.99,12.12
+		c0,8.4,6.81,15.21,15.21,15.21c2.03,0,4.71-0.7,6.2-1.23c36.93-13.09,61.6-50.74,61.6-92.36c0-55.23-44.77-100-100-100
+		s-100,44.77-100,100c0,41.72,24.86,79.27,61.85,92.47C88.28,217.95,90.63,218.59,92.6,218.59z"/>
+<!-- 
+  The Two "gears" that's shown inside of the main stroke animation
+-->
+	<circle class="smallGear" cx="125.06" cy="84.64" r="11.92"/>
+	<circle  class="bigGear" cx="125.06" cy="168.28" r="22.98"/>
+</svg>
+ 
