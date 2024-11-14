@@ -155,6 +155,12 @@
       }
       imgs.innerHTML = outHtml;
       preview.innerHTML = previewHtml;
+      
+      function setInitials(){
+      if (localStorage.getItem("bgColor")){
+          document.getElementsByTagName('body')[0].style.backgroundColor = localStorage.getItem("bgColor");      
+        }
+      }
       function changeImgSrc(ob){ 
         var previousSelect = document.getElementsByClassName('selected');
         (previousSelect.length > 0)? previousSelect[0].classList.remove('selected'):'';
@@ -180,6 +186,7 @@
       }
       function changeBodyColor(ob){
         document.getElementsByTagName('body')[0].style.background = ob.value;
+        localStorage.setItem("bgColor", ob.value);
         colorHex.innerText = ob.value;
       }
       function resetControls(){        
@@ -188,6 +195,7 @@
         document.getElementById('size').value = 32;
         document.getElementById('color').value = '#FFFFFF';        
       }
+      setInitials();
     </script>
   </body>
 </html>

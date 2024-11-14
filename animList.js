@@ -1,5 +1,7 @@
 var arr =[
 'Ball-1s-200px.svg',
+'bars2.svg',
+'bars.svg',
 'Blocks-1.5s-200px.svg',
 'Blocks-2.2s-200px.svg',
 'Chunk-4s-200px.svg',
@@ -46,6 +48,7 @@ var arr =[
 'Spinner-2.9s-200px.svg',
 'SpinnerO-0.8s-200px.svg',
 'Spinner-o1.1s-200px.svg',
+'stripes.svg',
 'water-wheel-spinner.svg',
 'Wedges-2.4s-200px.svg',
 'Wedges-5.9s-200px.svg',
