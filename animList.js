@@ -1,6 +1,7 @@
 var arr =[
 'Ball-1s-200px.svg',
 'bars2.svg',
+'bars-circle.svg',
 'bars.svg',
 'Blocks-1.5s-200px.svg',
 'Blocks-2.2s-200px.svg',
