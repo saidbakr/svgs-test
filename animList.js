@@ -49,6 +49,7 @@ var arr =[
 'Spinner-2.9s-200px.svg',
 'SpinnerO-0.8s-200px.svg',
 'Spinner-o1.1s-200px.svg',
+'stripes2.svg',
 'stripes.svg',
 'water-wheel-spinner.svg',
 'Wedges-2.4s-200px.svg',
