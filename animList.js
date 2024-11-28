@@ -18,6 +18,8 @@ var arr =[
 'Eclipse-0.8s-200px.svg',
 'Eclipse-1s-200px.svg',
 'Ellipsis-1s-200px.svg',
+'fidget2.svg',
+'fidget.svg',
 'Gear-0.2s-200px.svg',
 'Gear-0.3s-200px.svg',
 'Gear-0.4s-200px.svg',
