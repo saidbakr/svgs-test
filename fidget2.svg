@@ -16,18 +16,18 @@
     <animateTransform xlink:href="#g" attributeName="transform" attributeType="XML" type="rotate"
       from="0 50 50" to="360 50 50" dur=".5s" repeatCount="indefinite" />
     <animate id="an1" xlink:href="#b1" attributeName="cx" calcMode="spline" keyTimes="0; 0.5; 1"
-      values="50; 42; 50" keySplines=".6 .01 .36 .99; .6 .01 .36 .99;"
+      values="50; 29; 50" keySplines=".6 .01 .36 .99; .6 .01 .36 .99;"
       dur=".5s" repeatCount="indefinite" />
     <animate id="an2" xlink:href="#b2" attributeName="cx"
       values="50; 58; 50" calcMode="spline"
       keySplines=".6 .01 .36 .99; .6 .01 .36 .99;"
       keyTimes="0; 0.5; 1" dur=".5s" repeatCount="indefinite" />
     <animate xlink:href="#b1" attributeName="r"
-      values="12.8; 10; 12.8" calcMode="spline"
+      values="25.8; 12.6; 25.8" calcMode="spline"
       keySplines=".6 .01 .36 .99; .6 .01 .36 .99;"
       keyTimes="0; 0.5; 1" dur=".5s" repeatCount="indefinite" />
     <animate xlink:href="#b2" attributeName="r"
-      values="12.8; 10; 12.8" calcMode="spline"
+      values="25.8; 12.6; 25.8" calcMode="spline"
       keySplines=".6 .01 .36 .99; .6 .01 .36 .99;"
       keyTimes="0; 0.5; 1" dur=".5s" repeatCount="indefinite" />
     <animate attributeName="fill" values="green;orange;red" dur="1.5s" repeatCount="indefinite" />
