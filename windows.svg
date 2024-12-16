@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-50 -50 100 100">
+  <style>
+    .dot {
+      fill: #0078D4;
+    }
+  </style>
+ 
+  <g>
+    <!-- Defining the perfectly circular path -->
+    <path id="circlePath" d="M 0 -25 A 25 25 0 1 0 0 -25.1" fill="none" display="none"/>
+ 
+    <!-- 11 dots evenly spaced -->
+    <g>
+      <circle class="dot" cx="0" cy="-25" r="6"/>
+      <!-- <circle class="dot" cx="6" cy="-24.5" r="1.5"/> -->
+      <circle class="dot" cx="12" cy="-23" r="3"/>
+      <!-- <circle class="dot" cx="17" cy="-20" r="1.5"/> -->
+      <circle class="dot" cx="21" cy="-16" r="6"/>
+      <!-- <circle class="dot" cx="24" cy="-12" r="1.5"/> -->
+      <circle class="dot" cx="-6" cy="-24.5" r="3"/>
+      <!-- <circle class="dot" cx="-12" cy="-23" r="1.5"/> -->
+      <circle class="dot" cx="-17" cy="-20" r="3"/>
+      <!--<circle class="dot" cx="-21" cy="-16" r="1.5"/> -->
+      <circle class="dot" cx="-24" cy="-12" r="6"/>
+ 
+      <!-- Group rotation animation -->
+      <animateTransform
+        attributeName="transform"
+        type="rotate"
+        from="0"
+        to="360"
+        dur="2s"
+        repeatCount="indefinite"/>
+    </g>
+  </g>
+</svg> 
